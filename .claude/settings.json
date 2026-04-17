@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "FILE=$(jq -r '.tool_input.file_path // empty'); echo \"$FILE\" | grep -q '/app/' || exit 0; cd /home/user/angelicphone && git add app/ && git diff --cached --quiet || (git commit -m 'auto: update app files' && git push origin claude/review-littlephone-architecture-9pY5A)",
+            "statusMessage": "Pushing to GitHub..."
+          }
+        ]
+      }
+    ]
+  }
+}
