@@ -198,6 +198,9 @@ function renderSettings(el) {
     toggle.setAttribute('aria-checked', String(on));
   });
 
+  // General API sub-screen
+  el.querySelector('#row-general-api').addEventListener('click', () => _navigate('api-settings'));
+
   // Wallpaper sub-screen
   el.querySelector('#row-wallpaper').addEventListener('click', () => renderWallpaper(el));
 

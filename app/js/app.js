@@ -1,9 +1,11 @@
 import { register, navigate } from './router.js';
-import * as home     from '../screens/home.js';
-import * as settings from '../screens/settings.js';
+import * as home        from '../screens/home.js';
+import * as settings    from '../screens/settings.js';
+import * as apiSettings from '../screens/api-settings.js';
 
-register('home',     home);
-register('settings', settings);
+register('home',         home);
+register('settings',     settings);
+register('api-settings', apiSettings);
 
 // Stub screens for screens not yet built
 function stub(name) {
